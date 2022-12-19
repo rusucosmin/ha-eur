@@ -1,0 +1,147 @@
+title: Europa
+views:
+  - path: default_view
+    title: Home
+    cards:
+      - type: grid
+        square: false
+        columns: 1
+        cards:
+          - type: entities
+            entities:
+              - sensor.sonic_charging_rate
+              - sensor.sonic_energy_added
+              - sensor.sonic_charger_power
+              - sensor.sonic_odometer
+              - sensor.sonic_range
+              - sensor.sonic_temperature_outside
+              - sensor.sonic_temperature_inside
+              - sensor.sonic_time_charge_complete
+              - sensor.sonic_tpms_front_left
+              - sensor.sonic_tpms_front_right
+              - sensor.sonic_tpms_rear_left
+              - sensor.sonic_tpms_rear_right
+              - binary_sensor.sonic_parking_brake
+              - binary_sensor.sonic_online
+              - binary_sensor.sonic_asleep
+              - binary_sensor.sonic_charger
+              - binary_sensor.sonic_charging
+              - binary_sensor.sonic_doors
+              - cover.sonic_charger_door
+              - cover.sonic_frunk
+              - cover.sonic_trunk
+              - cover.sonic_windows
+              - lock.sonic_doors
+              - lock.sonic_charge_port_latch
+              - button.sonic_flash_lights
+              - button.sonic_remote_start
+              - number.sonic_charge_limit
+              - number.sonic_charging_amps
+              - select.sonic_heated_seat_left
+              - select.sonic_heated_seat_right
+              - select.sonic_heated_seat_rear_left
+              - select.sonic_heated_seat_rear_center
+              - select.sonic_heated_seat_rear_right
+              - switch.sonic_heated_steering
+              - switch.sonic_sentry_mode
+              - switch.sonic_charger
+            title: Garage
+          - type: thermostat
+            entity: climate.sonic_hvac_climate_system
+      - type: grid
+        square: false
+        columns: 1
+        cards:
+          - type: entities
+            entities:
+              - sensor.hacs
+            title: Living Room
+          - type: media-control
+            entity: media_player.living_room_speaker
+          - type: media-control
+            entity: media_player.spotify_cr_rusucosmin
+      - type: grid
+        square: false
+        columns: 1
+        cards:
+          - type: entities
+            entities:
+              - remote.bedroom
+              - sensor.archer_ax20_kib_s_received
+              - sensor.archer_ax20_kib_s_sent
+              - sensor.archer_ax20_kib_s_received_2
+              - sensor.archer_ax20_kib_s_sent_2
+              - sensor.mi_air_purifier_3_3h_temperature
+              - sensor.mi_air_purifier_3_3h_humidity
+              - sensor.mi_air_purifier_3_3h_pm2_5
+              - fan.mi_air_purifier_3_3h
+              - sensor.epson_l3250_series
+              - light.hue_lightstrip_office
+              - light.office
+              - light.hue_lightstrip_plus_1
+            title: Office
+            footer:
+              type: buttons
+              entities:
+                - entity: scene.office_energize
+                  show_icon: true
+                  show_name: true
+                  name: Energize
+                - entity: scene.office_concentrate
+                  show_icon: true
+                  show_name: true
+                  name: Concentrate
+          - type: media-control
+            entity: media_player.bedroom
+      - type: grid
+        square: true
+        columns: 3
+        cards:
+          - type: picture-entity
+            entity: person.cosmin_rusu
+            aspect_ratio: '1'
+            show_name: false
+            image: >-
+              data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 50 50' width='50' height='50'
+              style='background-color:%23b3e5fC'%3E%3Cg%3E%3Ctext
+              font-family='roboto' x='50%25' y='50%25' text-anchor='middle'
+              stroke='%23212121' font-size='1.3em'
+              dy='.3em'%3ECR%3C/text%3E%3C/g%3E%3C/svg%3E
+          - type: picture-entity
+            entity: person.alexandra_crisan
+            aspect_ratio: '1'
+            show_name: false
+            image: >-
+              data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 50 50' width='50' height='50'
+              style='background-color:%23b3e5fC'%3E%3Cg%3E%3Ctext
+              font-family='roboto' x='50%25' y='50%25' text-anchor='middle'
+              stroke='%23212121' font-size='1.3em'
+              dy='.3em'%3EAC%3C/text%3E%3C/g%3E%3C/svg%3E
+      - type: entities
+        entities:
+          - binary_sensor.cosmins_monitor_entertainment_configuration
+        title: Binary sensor
+      - type: entities
+        entities:
+          - light.hue_lightstrip_plus_1_2
+          - light.hue_lightstrip_plus_2
+          - light.hue_lightstrip_plus_3
+          - light.hue_lightstrip_plus_4
+          - light.hue_lightstrip_plus_5
+          - light.hue_lightstrip_plus_6
+          - light.hue_lightstrip_plus_7
+        title: Light
+      - type: grid
+        square: false
+        columns: 1
+        cards:
+          - type: media-control
+            entity: media_player.samsung_7_series_55
+          - type: media-control
+            entity: media_player.tv_samsung_7_series_55
+      - type: weather-forecast
+        entity: weather.forecast_europa
+        show_forecast: false
+
