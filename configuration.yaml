@@ -17,4 +17,13 @@ scene: !include scenes.yaml
 lovelace:
   mode: yaml
 
+  dashboards:    
+    lovelace-home:
+      mode: yaml
+      filename: birdseye.yaml
+      title: Home
+      icon: mdi:home
+      show_in_sidebar: true
+      require_admin: true
+
 cloud:

@@ -1,14 +1,5 @@
-- id: '1670770197664'
-  alias: Cosmin leaving the home
-  description: ''
-  use_blueprint:
-    path: homeassistant/notify_leaving_zone.yaml
-    input:
-      person_entity: person.cosmin_rusu
-      zone_entity: zone.home
-      notify_device: d46eeb7d783e7c0bb64171153e834b32
 - id: '1671223982043'
-  alias: New Automation
+  alias: Turn Lights On 30 minutes before sun set
   description: ''
   trigger:
   - platform: sun
