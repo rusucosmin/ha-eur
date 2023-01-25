@@ -1,0 +1,13 @@
+- id: '1671223982043'
+  alias: Turn Lights On 30 minutes before sun set
+  description: ''
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: -00:30
+  condition: []
+  action:
+  - service: light.turn_on
+    data:
+      entity_id: all
+  mode: single

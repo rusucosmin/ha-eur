@@ -1,0 +1,78 @@
+title: Europa2
+views:
+  - theme: Backend-selected
+    path: default_view
+    title: Home
+    type: panel
+    badges: []
+    cards:
+      - square: false
+        columns: 2
+        type: grid
+        cards:
+          - type: picture-elements
+            elements:
+              - type: state-icon
+                tap_action:
+                  action: toggle
+                entity: light.hue_lightstrip_plus_1
+                style:
+                  top: 22%
+                  left: 40%
+              - type: state-icon
+                tap_action:
+                  action: toggle
+                entity: light.hue_lightstrip_plus_1
+                style:
+                  top: 40%
+                  left: 40%
+            image: https://www.dropbox.com/s/edyth9ud36c5qob/plan.jpeg?dl=1
+          - type: entities
+            entities:
+              - sensor.sonic_charging_rate
+              - sensor.sonic_energy_added
+              - sensor.sonic_charger_power
+              - sensor.sonic_odometer
+              - sensor.sonic_range
+              - sensor.sonic_temperature_outside
+              - sensor.sonic_temperature_inside
+              - sensor.sonic_time_charge_complete
+              - sensor.sonic_tpms_front_left
+              - sensor.sonic_tpms_front_right
+              - sensor.sonic_tpms_rear_left
+              - sensor.sonic_tpms_rear_right
+              - binary_sensor.sonic_parking_brake
+              - binary_sensor.sonic_online
+              - binary_sensor.sonic_asleep
+              - binary_sensor.sonic_charger
+              - binary_sensor.sonic_charging
+              - binary_sensor.sonic_doors
+              - cover.sonic_charger_door
+              - cover.sonic_frunk
+              - cover.sonic_trunk
+              - cover.sonic_windows
+              - lock.sonic_doors
+              - lock.sonic_charge_port_latch
+              - button.sonic_flash_lights
+              - button.sonic_remote_start
+              - number.sonic_charge_limit
+              - number.sonic_charging_amps
+              - select.sonic_heated_seat_left
+              - select.sonic_heated_seat_right
+              - select.sonic_heated_seat_rear_left
+              - select.sonic_heated_seat_rear_center
+              - select.sonic_heated_seat_rear_right
+              - switch.sonic_heated_steering
+              - switch.sonic_sentry_mode
+              - switch.sonic_charger
+            title: Garage
+          - type: picture-elements
+            elements:
+              - type: state-badge
+                entity: binary_sensor.cosmins_monitor_entertainment_configuration
+                style:
+                  top: 32%
+                  left: 40%
+            image: >-
+              https://www.dropbox.com/s/jl7t67kp7v73haw/minimal-mobilat-parter.png?dl=1
+
